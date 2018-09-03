@@ -1,5 +1,7 @@
 package com.instancia2;
 
+import com.instancia2.hilos.HiloPropio;
+
 public class Main {
 
     /**
@@ -8,6 +10,13 @@ public class Main {
      */
     public static void main(String[] args) {
 
+        HiloPropio hiloPropio = new HiloPropio();
+
+        hiloPropio.start();
+
+        for(int i=0; i<=100; i++){
+            System.out.println("Contador de main: " + i);
+        }
 
 
     }
